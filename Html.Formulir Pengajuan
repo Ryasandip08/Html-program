@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pengajuan Pinjaman</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .form-container {
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-container img {
+            width: 70px;
+            vertical-align: middle;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .submit-btn {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="unindra.jpeg" alt="unindra.jpeg" />
+        <h2>Formulir Pengajuan Pinjaman</h2>
+        <form action="#" method="post">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="ktp">Nomor KTP:</label>
+            <input type="text" id="ktp" name="ktp" required>
+
+            <label for="jumlah">Jumlah Pinjaman:</label>
+            <select id="jumlah" name="jumlah" required>
+                <option value="10 juta">Rp 10 juta</option>
+                <option value="15 juta">Rp 15 juta</option>
+                <option value="20 juta">Rp 20 juta</option>
+            </select>
+
+            <label>Jenis Pinjaman:</label>
+            <div class="radio-group">
+                <input type="radio" id="konsumtif" name="jenis" value="Konsumtif" required>
+                <label for="konsumtif">Konsumtif</label>
+                <input type="radio" id="produktif" name="jenis" value="Produktif">
+                <label for="produktif">Produktif</label>
+            </div>
+
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" required></textarea>
+
+            <button type="submit" class="submit-btn">Ajukan</button>
+        </form>
+    </div>
+</body>
+</html>
